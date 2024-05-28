@@ -18,9 +18,9 @@ public class VendingMachine {
     public VendingMachine() {
         //System.out.println("Calling VM Constructor START");
         this.state = new IdleState();
-        this.inventory = new Inventory(20);
-        this.coinList = new ArrayList<>();
         this.MAX_CAPACITY = 20;
+        this.inventory = new Inventory(MAX_CAPACITY);
+        this.coinList = new ArrayList<>();
         //System.out.println("Calling VM Constructor END");
     }
 

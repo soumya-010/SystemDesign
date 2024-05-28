@@ -18,12 +18,11 @@ public class VMMain {
         fillUpInventory(vendingMachine);
         displayInventory(vendingMachine);
 
-        System.out.println("| ************************ End of Init Inventory ************************ |");
+        System.out.println("| ************************ End of Init Inventory ************************ | \n \n");
 
         State vendingState = vendingMachine.getState();
-        System.out.println("Current State of Vending Machine: " + vendingState.getClass().getSimpleName());
+        //System.out.println("Current State of Vending Machine: " + vendingState.getClass().getSimpleName());
 
-        System.out.println("| ************************ Filling Up Coin List START ************************ |");
         vendingState.insertCoin(vendingMachine, Coin.PENNY);
         vendingState.insertCoin(vendingMachine, Coin.NICKEL);
         vendingState.insertCoin(vendingMachine, Coin.QUARTER);
@@ -32,18 +31,19 @@ public class VMMain {
         vendingState.insertCoin(vendingMachine, Coin.DIME);
         vendingState.insertCoin(vendingMachine, Coin.DIME);
 
+        System.out.println("\n \n | ************************ COIN BANK ************************ |");
         List<Coin> coinList = vendingMachine.getCoinList();
         for(Coin coin : coinList) {
-            System.out.println(coin.value);
+            System.out.println(coin.name() + " " + coin.value);
         }
 
         vendingState = vendingMachine.getState();
         System.out.println("Current State of Vending Machine: " + vendingState.getClass().getSimpleName());
 
-        System.out.println("| ************************ Filling Up Coin List END ************************ |");
+        System.out.println("| ************************ Filling Up Coin List END ************************ | \n \n");
 
         vendingState = vendingMachine.getState();
-        System.out.println("| Clicking on Choose Product |");
+        System.out.println("\n | Clicking on Choose Product |");
 
         vendingState = DispenseProductFromVendingMachine(vendingMachine, vendingState, 101);
         vendingState = DispenseProductFromVendingMachine(vendingMachine, vendingState, 101);
@@ -70,7 +70,7 @@ public class VMMain {
     private static void fillUpInventory(VendingMachine vendingMachine) throws Exception {
         Inventory inventory = vendingMachine.getInventory();
         Product[] products = inventory.getProducts();
-        System.out.println(products.length);
+        // System.out.println(products.length);
 
         for (int idx = 0; idx < 20; idx++) {
 
@@ -114,7 +114,7 @@ public class VMMain {
     private static void displayInventory(VendingMachine vendingMachine){
         Inventory inventory = vendingMachine.getInventory();
         Product[] products = inventory.getProducts();
-        System.out.println("| ************************ displayInventory ************************ |");
+        System.out.println("| ************************ INVENTORY ************************ |");
 
         System.out.println(inventory.getItemCount());
         for (int i = 0; i < inventory.getItemCount(); i++) {

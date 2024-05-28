@@ -11,10 +11,10 @@ import java.util.List;
 public class DispensedState implements State {
 
     public DispensedState() {
-        System.out.println("Entering DispensedState with default constructor [no-arguments]");
+        //System.out.println("Entering DispensedState with default constructor [no-arguments]");
     }
     public DispensedState(VendingMachine machine) {
-        System.out.println("Entering DispensedState with parameterized constructor [VendingMachine]");
+        //System.out.println("Entering DispensedState with parameterized constructor [VendingMachine]");
     }
 
     @Override

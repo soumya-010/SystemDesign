@@ -10,11 +10,11 @@ import java.util.List;
 public class HasCoinState implements State{
 
     public HasCoinState() {
-        System.out.println("Entering HasCoinState with default constructor [no-arguments]");
+        //System.out.println("Entering HasCoinState with default constructor [no-arguments]");
     }
 
     public HasCoinState(VendingMachine machine) {
-        System.out.println("Entering HasCoinState with parameterized constructor [arguments: VendingMachine]");
+        //System.out.println("Entering HasCoinState with parameterized constructor [arguments: VendingMachine]");
     }
 
     @Override

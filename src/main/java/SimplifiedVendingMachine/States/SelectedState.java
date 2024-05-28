@@ -11,11 +11,11 @@ import java.util.List;
 public class SelectedState implements State{
 
     public SelectedState() {
-        System.out.println("Entering SelectedState with default constructor [no-arguments]");
+        //System.out.println("Entering SelectedState with default constructor [no-arguments]");
     }
 
     public SelectedState(VendingMachine machine) {
-        System.out.println("Entering SelectedState with parameterized constructor [VendingMachine]");
+        //System.out.println("Entering SelectedState with parameterized constructor [VendingMachine]");
     }
 
     @Override

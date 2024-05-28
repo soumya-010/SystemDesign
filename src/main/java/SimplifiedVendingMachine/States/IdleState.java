@@ -12,11 +12,11 @@ import java.util.List;
 public class IdleState implements State{
 
     public IdleState() {
-        System.out.println("Entering IdleState with default constructor [no-arguments]");
+        //System.out.println("Entering IdleState with default constructor [no-arguments]");
     }
 
     public IdleState(VendingMachine machine) {
-        System.out.println("Entering IdleState with parameterized constructor [arguments: VendingMachine]");
+        //System.out.println("Entering IdleState with parameterized constructor [arguments: VendingMachine]");
         if (machine.getCoinList() == null) {
             machine.setCoinList(new ArrayList<>());
         }
@@ -24,7 +24,7 @@ public class IdleState implements State{
 
     @Override
     public void insertCoin(VendingMachine machine, Coin coin) throws Exception {
-        System.out.println("Inserting Coin of value = " + coin.value + "into Vending Machine in IdleState");
+        System.out.println("Inserting Coin of value = " + coin.value + " into Vending Machine in IdleState");
         List<Coin> coinList = machine.getCoinList();
         coinList.add(coin);
         machine.setState(new HasCoinState(machine));
